@@ -1,0 +1,149 @@
+.container{
+    width: 550px;
+    height: 820px;
+    background: linear-gradient(230deg,rgb(73, 20, 220),rgba(58, 7, 58, 0.831));
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+.top-bar{
+    display: flex;
+    gap: 14px;
+    padding-top: 10px;
+    justify-content: center;
+    position: relative;
+}
+.top-bar input{
+    display: flex;
+    width: 362px;
+    height: 50px;
+    background-color: azure;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    padding-left: 40px;
+    color: #626262;
+    font-size: 20px;
+    font-weight: 400;
+}
+.search-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 78px;
+    height: 50px;
+    background-color: azure;
+    border-radius: 40px;
+    cursor: pointer;
+}
+.weather-image{
+    margin-top: 15px;
+}
+.weather-temp{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 70px;
+    font-weight: 400;
+
+}
+.weather-location{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: roboto;
+    font-size: 50px;
+    font-weight: 400;
+}
+.data-container{
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.elements{
+    margin: auto;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+
+}
+.data{
+    font-size: 34px;
+    font-weight: 400;
+    margin-top: -12px
+
+}
+.text{
+    font-size: 20px;
+    font-weight: 400;
+}
+.icon{
+    margin-top: 10px;
+}
+.weather-des{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+.suggestions{
+    position: absolute;
+    top: 105%;
+    left: 55px;
+    padding: 10px;
+    width: 330px;
+    background:white;
+    border-radius: 5px;
+    list-style: none;
+}li{
+    margin-bottom: 7px;
+}
+
+.loader-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; 
+  }
+
+.blur-content {
+    filter: blur(5px); 
+  }
+@media (max-width:600px){
+   
+    .container{
+        width: 370px;
+        height: 770px;
+    }
+    .top-bar input{
+        width: 180px;
+    }
+    .weather-temp{
+        font-size: 75px;
+    }
+    .weather-location{
+        font-size: 50px;
+    }
+    .text{
+        font-size: 18px;
+    }
+    .humidity-percent{
+        font-size: 23px;
+    }
+    .wind-rate{
+        font-size: 23px;
+    }
+}
+ 

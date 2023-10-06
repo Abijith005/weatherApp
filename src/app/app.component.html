@@ -1,0 +1,48 @@
+
+
+<div class="container" >
+  <div class="contents" [class.blur-content]="loading">
+  <div class="top-bar">
+    <input type="text"  [(ngModel)]="cityName"  placeholder="Search" class="searchInput" />
+    <div class="search-icon" (click)="onSearch()">
+      <img src="../assets/search.png" alt="" />
+    </div>
+    <ul class="suggestions" *ngIf="suggestedPlaces" (click)="getSuggestion($event)">
+      <li *ngFor="let item of suggestedPlaces">{{item}}</li>
+    </ul>
+  </div>
+      <div class="weather-image">
+    <div style="display: flex;justify-content: center;">
+      <img [src]="((weatherDatas)? weatherDatas!.weather[0].icon:'') | image " alt="" />
+    </div>
+    <div class="weather-des">
+      <h5>{{((weatherDatas)? weatherDatas!.weather[0].description:'')|titlecase }}</h5>
+    </div>
+  </div>
+  <div class="weather-temp">{{weatherDatas?.main?.temp}}°C</div>
+  <div class="weather-location">{{weatherDatas?.name}}</div>
+  <div class="data-container">
+    <div class="elements">
+      <img src="../assets/humidity.png" alt="" />
+      <div class="data">
+        <div class="humidity-percent">{{weatherDatas?.main?.humidity}}%</div>
+        <div class="text">Humidity</div>
+      </div>
+    </div>
+    <div class="elements">
+      <div>
+        <img src="../assets/wind.png" alt="" />
+      </div>
+      <div class="data">
+        <div class="wind-rate">{{weatherDatas?.wind?.speed}} km/hr</div>
+        <div class="text">Wind Speed</div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="loader-container" *ngIf="loading">
+    <app-loader [loader]="loading"></app-loader>
+  </div>
+</div>
+
+
